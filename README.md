@@ -47,3 +47,12 @@ The dataset used in this project is publicly available on **Roboflow Universe**.
    ```bash
    git clone https://github.com/Ujjwal007-walle/Helmet-Detection.git
    cd Helmet-Detection
+2. Install dependencies:
+    pip install ultralytics opencv-python
+3. Train the model (inside Colab or locally):
+   yolo task=detect mode=train data=data.yaml model=yolov11n.pt epochs=50 imgsz=640
+4.Run inference on images/videos: yolo task=detect mode=predict model=runs/detect/train/weights/best.pt source=your_input.jpg
+
+   
+
+   
