@@ -16,3 +16,10 @@ OpenCV
 Google Colab (for training & testing)
 
 GitHub (for project storage & version control)
+
+## 📊 Dataset
+The dataset used in this project is publicly available on **Roboflow Universe**.  
+You can access and explore it here: [Helmet Detection Dataset](https://universe.roboflow.com/jayz-workspace/helmet-detector-9rzmg)
+
+This dataset contains images of bike riders with and without helmets, annotated for training YOLO models.
+
