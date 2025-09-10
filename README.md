@@ -66,6 +66,28 @@ yolo detect val model=runs/detect/helmet-detection/weights/best.pt data="https:/
 # Step 6: Run inference on test images
 yolo detect predict model=runs/detect/helmet-detection/weights/best.pt source="test_images/"
 
-   
+
+📈 Results
+
+Real-time detection of bike riders with/without helmets.
+
+Can be extended for traffic monitoring and automated challan systems.
+
+📌 Future Scope
+
+Integration with CCTV cameras for live monitoring.
+
+Deployment on edge devices like Raspberry Pi.
+
+Combining helmet detection with license plate recognition.
+
+🙌 Acknowledgments
+
+Dataset from Roboflow Universe
+
+YOLOv11 by Ultralytics
+
+Tutorial reference: Helmet Detection using YOLO11 Complete Tutorial by DSwithBappy
 
    
+
