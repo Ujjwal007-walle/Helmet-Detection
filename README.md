@@ -41,17 +41,30 @@ The dataset used in this project is publicly available on **Roboflow Universe**.
 
 ---
 
-## 🚀 How to Run  
+## 🚀 Usage
 
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/Ujjwal007-walle/Helmet-Detection.git
-   cd Helmet-Detection
-2. Install dependencies:
-    pip install ultralytics opencv-python
-3. Train the model (inside Colab or locally):
-   yolo task=detect mode=train data=data.yaml model=yolov11n.pt epochs=50 imgsz=640
-4.Run inference on images/videos: yolo task=detect mode=predict model=runs/detect/train/weights/best.pt source=your_input.jpg
+After cloning the repository, open the project in **Google Colab** and run the following commands step by step:
+
+```bash
+# Step 1: Clone the repository
+git clone https://github.com/Ujjwal007-walle/Helmet-Detection.git
+cd Helmet-Detection
+
+# Step 2: Install YOLOv11
+pip install ultralytics==8.0.196
+
+# Step 3: Verify installation
+yolo --version
+
+# Step 4: Train the model (Helmet Detection Dataset from Roboflow)
+yolo detect train data="https://universe.roboflow.com/jayz-workspace/helmet-detector-9rzmg/dataset.yaml" \
+    model=yolov11n.pt epochs=50 imgsz=640 batch=16 name=helmet-detection
+
+# Step 5: Validate the model
+yolo detect val model=runs/detect/helmet-detection/weights/best.pt data="https://universe.roboflow.com/jayz-workspace/helmet-detector-9rzmg/dataset.yaml"
+
+# Step 6: Run inference on test images
+yolo detect predict model=runs/detect/helmet-detection/weights/best.pt source="test_images/"
 
    
 
